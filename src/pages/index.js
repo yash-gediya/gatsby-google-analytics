@@ -7,16 +7,12 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import ReactGA from "react-ga4"
 
-
 const IndexPage = () => {
-
   const clickHandle = () => {
-    ReactGA.initialize("G-97NGVQTB02")
+    ReactGA.initialize("G-NDV0WVLXKJ")
+    ReactGA.send({ hitType: "pageview", page: location.pathname })
   }
 
-  // useEffect(() => {
-  //   ReactGA.send({ hitType: "pageview", page: location.pathname })
-  // }, [location])
   return (
     <Layout>
       <Seo title="Home" />
