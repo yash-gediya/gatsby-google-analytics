@@ -8,11 +8,12 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => {
   const clickHandle = () => {
-    window.gtag("Buttonevent", "Buttonclick", {
-      event_category: "category",
-      event_label: "label",
-      value: "value",
-    })
+    dataLayer.push({ event: "login" })
+    // window.gtag("Buttonevent", "Buttonclick", {
+    //   event_category: "category",
+    //   event_label: "label",
+    //   value: "value",
+    // })
   }
 
   return (
