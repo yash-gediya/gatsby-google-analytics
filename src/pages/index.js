@@ -7,16 +7,15 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
 const IndexPage = () => {
-  const clickHandle = () => {
-     window.dataLayer = window.dataLayer || []
-     window.dataLayer.push({
-       event: "registrationComplete",
-     })
-    // window.gtag("Buttonevent", "Buttonclick", {
-    //   event_category: "category",
-    //   event_label: "label",
-    //   value: "value",
-    // })
+  const clickHandle = (e) => {
+      e.preventDefault()
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({
+        event: "buttonClick",
+        category: "Custom Button",
+        action: "click",
+        lable: "Google Analytics Custom Button",
+      })
   }
 
   return (
