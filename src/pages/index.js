@@ -5,12 +5,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-import ReactGA from "react-ga4"
 
 const IndexPage = () => {
   const clickHandle = () => {
-    ReactGA.initialize("G-NDV0WVLXKJ")
-    ReactGA.send({ hitType: "pageview", page: location.pathname })
+  window.gtag("Buttonevent", "Buttonclick")
   }
 
   return (
