@@ -8,7 +8,7 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => {
   const clickHandle = () => {
-    window.gtag("event", "click")
+    window.gtag("event", "ButtonClick")
   }
 
   return (
