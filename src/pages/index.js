@@ -8,7 +8,10 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => {
   const clickHandle = () => {
-    dataLayer.push({ event: "login" })
+     window.dataLayer = window.dataLayer || []
+     window.dataLayer.push({
+       event: "registrationComplete",
+     })
     // window.gtag("Buttonevent", "Buttonclick", {
     //   event_category: "category",
     //   event_label: "label",
