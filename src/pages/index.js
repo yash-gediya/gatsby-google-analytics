@@ -8,13 +8,15 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => {
   const clickHandle = () => {
-    // window.gtag("event", "ButtonClick")
+    window.gtag("event", "click", { page_path: window.location.pathname })
   }
+
 
   return (
     <Layout>
       <Seo title="Home" />
       <div>
+        {process.env.APP_TITLE}
         <button onClick={clickHandle}>Google initialize</button>
         GoogleAnalytics <br />
         <Link to={"one"}>One</Link>
